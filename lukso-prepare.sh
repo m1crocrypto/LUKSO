@@ -19,3 +19,12 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 docker-compose --version
+
+# install lukso-cli
+cd /usr/local/bin/
+curl https://raw.githubusercontent.com/lukso-network/lukso-cli/main/cli_downloader.sh | bash
+cd $HOME
+mkdir relaidernode
+cd relaidernode
+lukso network init
+mkdir keystore
